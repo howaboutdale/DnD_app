@@ -1,0 +1,24 @@
+<!-- this is home page -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>The DND App</h1>
+
+{% if current_user() %}
+<h3>Welcome {{ current_user()['first_name'] }}</h3>
+
+<section class="controls">
+    <form action="/sessions/delete" method="POST">
+        <button>Log Out</button>
+    </form>
+
+    <a href="/home/new">Create a New Sheet</a>
+</section>
+
+
+</section>
+{% else %}
+<a href="/users/new">Sign Up</a>
+<a href="/sessions/new">Log in</a>
+{% endif %}
+{% endblock %}
