@@ -2,5 +2,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<a href="/home/new">Create a New Sheet</a>
+<a href="/home">Home</a>
+<section class="sheets">
+    {% for sheet in sheets %}
+    <section class="sheet">
+        <header>
+            <section class="controls">
+                <a href="/home/{{ sheet['id'] }}/edit">Edit</a>
 
+                <form action="home/{{ sheet['id'] }}/delete" method="POST">
+                    <button>Delete</button>
+                </form>
+            </section>
+            <h2>{{ sheet['character_name'] }} - {{ sheet['class_and_level'] }}</h2>
+            <img class="galleryimg" src="https://cdn.onlinewebfonts.com/svg/img_119089.png" alt="">
+    </section>
+    {% endfor %}
+</section>
 {% endblock %}

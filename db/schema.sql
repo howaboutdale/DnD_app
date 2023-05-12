@@ -24,6 +24,7 @@ CREATE TABLE sheets (
     svgthrow_stat_int TEXT,
     svgthrow_stat_wis TEXT,
     svgthrow_stat_cha TEXT,
+    prof_bonus TEXT,
     sk_acroba TEXT,
     sk_animal TEXT,
     sk_arcana TEXT,
@@ -57,7 +58,31 @@ CREATE TABLE sheets (
     ideals TEXT,
     bonds TEXT,
     flaws TEXT,
-    fluff TEXT
+    fluff TEXT,
+    spellcasting_class TEXT,
+    spellcasting_ability TEXT,
+    spell_save_dc TEXT,
+    cantrips TEXT,
+    first_level_spells TEXT,
+    second_level_spells TEXT,
+    third_level_spells TEXT,
+    fourth_level_spells TEXT,
+    fifth_level_spells TEXT,
+    sixth_level_spells TEXT,
+    seventh_level_spells TEXT,
+    eighth_level_spells TEXT,
+    ninth_level_spells TEXT,
+    age TEXT,
+    height TEXT,
+    character_weight TEXT,
+    eyes TEXT,
+    skin TEXT,
+    hair TEXT,
+    appearance TEXT,
+    allies_organisations TEXT,
+    character_backstory TEXT,
+    additional_features_traits TEXT,
+    treasure TEXT
 );
 
 CREATE TABLE users(
@@ -67,6 +92,7 @@ CREATE TABLE users(
   email TEXT,
   password_digest TEXT
 );
+
 
 INSERT INTO sheets(
     character_name,
@@ -89,6 +115,7 @@ INSERT INTO sheets(
     svgthrow_stat_int,
     svgthrow_stat_wis,
     svgthrow_stat_cha,
+    prof_bonus,
     sk_acroba,
     sk_animal,
     sk_arcana,
@@ -130,6 +157,33 @@ VALUES
 'test','test','test','test','test','test','test','test','test','test',
 'test','test','test','test','test','test','test','test','test','test',
 'test','test','test','test','test','test','test','test','test','test',
-'test', 'test','test','test');
+'test', 'test','test','test', 'test,');
 
--- 54 values total.
+-- 79 values total.
+
+
+  -- spellcasting_class,
+  -- spellcasting_ability,
+  -- spell_save_dc,
+  -- cantrips,
+  -- first_level_spells,
+  -- second_level_spells,
+  -- third_level_spells,
+  -- fourth_level_spells,
+  -- fifth_level_spells,
+  -- sixth_level_spells,
+  -- seventh_level_spells,
+  -- eighth_level_spells,
+  -- ninth_level_spells,
+
+    -- age
+    -- height
+    -- character_weight
+    -- eyes
+    -- skin
+    -- hair
+    -- appearance
+    -- allies_organisations
+    -- character_backstory
+    -- additional_features_traits
+    -- treasure

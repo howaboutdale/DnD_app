@@ -1,3 +1,64 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
 body {
   background-color: antiquewhite;
+}
+
+.sheetcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.basicinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainstats {
+  display: flex;
+  flex-direction: column;
+}
+
+.savingthrows {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.vitalinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.equipmentfluff {
+  display: flex;
+  flex-direction: column;
+}
+
+.featuresandtraits {
+  height: 200px;
+  font-size: 14pt;
+}
+.galleryimg {
+  height: 200px;
+  width: 200px;
+}
+
+.spellsheet {
+  display: flex;
+  flex-direction: column;
+}
+
+.biosheet {
+  display: flex;
+  flex-direction: column;
 }

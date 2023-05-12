@@ -3,193 +3,288 @@
 
 {% block content %}
 <h1>Create a Character Sheet!</h1>
+<a href="/home">Home (Content Will Be Lost)</a>
 <form action="/home" method="POST">
-    <section class="basicinfo">
+    <section class="sheetcontainer">
+        <section class="basicinfo">
+            <h3>Character Info</h3>
 
-        <label for="">Character Name:</label>
-        <input type="text" name="character_name">
+            <label for="">Character Name:</label>
+            <input type="text" name="character_name">
 
-        <label for="">Class and Level:</label>
-        <input type="text" name="class_and_level">
+            <label for="">Class and Level:</label>
+            <input type="text" name="class_and_level">
 
-        <label for="">Background:</label>
-        <input type="text" name="background">
+            <label for="">Background:</label>
+            <input type="text" name="background">
 
-        <label for="">Player Name:</label>
-        <input type="text" name="player_name">
+            <label for="">Player Name:</label>
+            <input type="text" name="player_name">
 
-        <label for="">Race:</label>
-        <input type="text" name="race">
+            <label for="">Race:</label>
+            <input type="text" name="race">
 
-        <label for="">Alignment:</label>
-        <input type="text" name="alignment">
+            <label for="">Alignment:</label>
+            <input type="text" name="alignment">
 
-        <label for="">Experience Points:</label>
-        <input type="text" name="experience_points">
+            <label for="">Experience Points:</label>
+            <input type="text" name="experience_points">
 
+        </section>
+
+        <section class="mainstats">
+            <h3>Stats</h3>
+
+            <label for="">Strength:</label>
+            <input type="number" name="stat_str">
+
+            <label for="">Dexterity:</label>
+            <input type="number" name="stat_dex">
+
+            <label for="">Constitution:</label>
+            <input type="number" name="stat_con">
+
+            <label for="">Intelligence:</label>
+            <input type="number" name="stat_int">
+
+            <label for="">Wisdom:</label>
+            <input type="number" name="stat_wis">
+
+            <label for="">Charisma:</label>
+            <input type="number" name="stat_cha">
+
+            <label for="">Passive Perception:</label>
+            <input type="number" name="passive_perception">
+
+        </section>
+
+        <section class="savingthrows">
+            <h3>Saving Throws</h3>
+
+            <label for="">Strength Saving Throw:</label>
+            <input type="number" name="svgthrow_stat_str">
+
+            <label for="">Dexterity Saving Throw:</label>
+            <input type="number" name="svgthrow_stat_dex">
+
+            <label for="">Constitution Saving Throw:</label>
+            <input type="number" name="svgthrow_stat_con">
+
+            <label for="">Intelligence Saving Throw:</label>
+            <input type="number" name="svgthrow_stat_int">
+
+            <label for="">Wisdom Saving Throw:</label>
+            <input type="number" name="svgthrow_stat_wis">
+
+            <label for="">Charisma Saving Throw:</label>
+            <input type="number" name="svgthrow_stat_cha">
+
+        </section>
+
+        <section class="skills">
+            <h3>Skills</h3>
+
+            <label for="">Proficiency Bonus:</label>
+            <input type="number" name="prof_bonus">
+
+            <label for="">Acrobatics:</label>
+            <input type="number" name="sk_acroba">
+
+            <label for="">Animal Handling:</label>
+            <input type="number" name="sk_animal">
+
+            <label for="">Arcana:</label>
+            <input type="number" name="sk_arcana">
+
+            <label for="">Athletics:</label>
+            <input type="number" name="sk_athlet">
+
+            <label for="">Deception:</label>
+            <input type="number" name="sk_decept">
+
+            <label for="">History:</label>
+            <input type="number" name="sk_histor">
+
+            <label for="">Insight:</label>
+            <input type="number" name="sk_insigh">
+
+            <label for="">Intimidation:</label>
+            <input type="number" name="sk_intimi">
+
+            <label for="">Investigation:</label>
+            <input type="number" name="sk_invest">
+
+            <label for="">Medicine:</label>
+            <input type="number" name="sk_medici">
+
+            <label for="">Nature:</label>
+            <input type="number" name="sk_nature">
+
+            <label for="">Perception:</label>
+            <input type="number" name="sk_percep">
+
+            <label for="">Performance:</label>
+            <input type="number" name="sk_perfor">
+
+            <label for="">Persuasion:</label>
+            <input type="number" name="sk_persua">
+
+            <label for="">Religion:</label>
+            <input type="number" name="sk_religi">
+
+            <label for="">Sleight of Hand:</label>
+            <input type="number" name="sk_sleigh">
+
+            <label for="">Stealth:</label>
+            <input type="number" name="sk_stealt">
+
+            <label for="">Survival:</label>
+            <input type="number" name="sk_suviva">
+
+            <label for="">Other Proficiencies and Languages:</label>
+            <input type="text" name="otr_prof_lang">
+
+        </section>
+
+        <section class="vitalinfo">
+            <h3>Vital Info</h3>
+
+            <label for="">Armor Class:</label>
+            <input type="number" name="armor">
+
+            <label for="">Initiative:</label>
+            <input type="number" name="initiative">
+
+            <label for="">Speed:</label>
+            <input type="number" name="speed">
+
+            <label for="">Current HP:</label>
+            <input type="number" name="current_hp">
+
+            <label for="">Temporary HP:</label>
+            <input type="number" name="temp_hp">
+
+            <label for="">Hit Dice:</label>
+            <input type="text" name="hit_dice">
+
+            <label for="">Death Save Successes:</label>
+            <input type="number" name="dthsv_pass">
+
+            <label for="">Death Save Failures:</label>
+            <input type="number" name="dthsv_fail">
+
+        </section>
+
+        <section class="equipmentfluff">
+            <h3>Equipment and Basic Info</h3>
+            <label for="">Weapons and Spells:</label>
+            <input type="text" name="attacks_spells">
+
+            <label for="">Equipment:</label>
+            <input type="text" name="equipment">
+
+            <label for="">Traits:</label>
+            <input type="text" name="traits">
+
+            <label for="">Ideals:</label>
+            <input type="text" name="ideals">
+
+            <label for="">Bonds:</label>
+            <input type="text" name="bonds">
+
+            <label for="">Flaws:</label>
+            <input type="text" name="flaws">
+
+            <label for="">Features and Traits:</label>
+            <textarea name="fluff" id="" cols="30" rows="10"></textarea>
+        </section>
+
+        <section class="spellsheet">
+            <h3>Spell Sheet</h3>
+
+            <label for="">Spellcasting Class:</label>
+            <input type="text" name="spellcasting_class">
+
+            <label for="">Spellcasting Ability:</label>
+            <input type="text" name="spellcasting_ability">
+
+            <label for="">Spell Save DC:</label>
+            <input type="number" name="spell_save_dc">
+
+            <label for="">Spell Attack Bonus:</label>
+            <input type="number" name="spell_atk_bonus">
+
+            <label for="">Cantrips:</label>
+            <input type="text" name="cantrips">
+
+            <label for="">First Level Spells:</label>
+            <input type="text" name="first_level_spells">
+
+            <label for="">Second Level Spells:</label>
+            <input type="text" name="second_level_spells">
+
+            <label for="">Third Level Spells:</label>
+            <input type="text" name="third_level_spells">
+
+            <label for="">Fourth Level Spells:</label>
+            <input type="text" name="fourth_level_spells">
+
+            <label for="">Fifth Level Spells:</label>
+            <input type="text" name="fifth_level_spells">
+
+            <label for="">Sixth Level Spells:</label>
+            <input type="text" name="sixth_level_spells">
+
+            <label for="">Seventh Level Spells:</label>
+            <input type="text" name="seventh_level_spells">
+
+            <label for="">Eighth Level Spells:</label>
+            <input type="text" name="eighth_level_spells">
+
+            <label for="">Ninth Level Spells:</label>
+            <input type="text" name="ninth_level_spells">
+
+        </section>
+
+        <section class="biosheet">
+            <h3>Character Bio</h3>
+
+            <label for="">Age</label>
+            <input type="text" name="age">
+
+            <label for="">Height:</label>
+            <input type="text" name="height">
+
+            <label for="">Weight:</label>
+            <input type="text" name="character_weight">
+
+            <label for="">Eyes:</label>
+            <input type="text" name="eyes">
+
+            <label for="">Skin:</label>
+            <input type="text" name="skin">
+
+            <label for="">Hair:</label>
+            <input type="text" name="hair">
+
+            <label for="">Appearnce:</label>
+            <input type="text" name="appearance">
+
+            <label for="">Allies and Organisations:</label>
+            <input type="text" name="allies_organisations">
+
+            <label for="">Character Backstory:</label>
+            <input type="text" name="character_backstory">
+
+            <label for="">Additional Features and Traits:</label>
+            <input type="text" name="additional_features_traits">
+
+            <label for="">Treasure:</label>
+            <input type="text" name="treasure">
+
+        </section>
+
+        <button>Click Here to Upload!</button>
     </section>
-
-    <section class="mainstats">
-
-        <label for="">Strength:</label>
-        <input type="text" name="stat_str">
-
-        <label for="">Dexterity:</label>
-        <input type="text" name="stat_dex">
-
-        <label for="">Constitution:</label>
-        <input type="text" name="stat_con">
-
-        <label for="">Intelligence:</label>
-        <input type="text" name="stat_int">
-
-        <label for="">Wisdom:</label>
-        <input type="text" name="stat_wis">
-
-        <label for="">Charisma:</label>
-        <input type="text" name="stat_cha">
-
-        <label for="">Passive Perception:</label>
-        <input type="text" name="passive_perception">
-
-    </section>
-
-    <section class="savingthrows">
-
-        <label for="">Strength Saving Throw:</label>
-        <input type="text" name="svgthrow_stat_str">
-
-        <label for="">Dexterity Saving Throw:</label>
-        <input type="text" name="svgthrow_stat_dex">
-
-        <label for="">Constitution Saving Throw:</label>
-        <input type="text" name="svgthrow_stat_con">
-
-        <label for="">Intelligence Saving Throw:</label>
-        <input type="text" name="svgthrow_stat_int">
-
-        <label for="">Wisdom Saving Throw:</label>
-        <input type="text" name="svgthrow_stat_wis">
-
-        <label for="">Charisma Saving Throw:</label>
-        <input type="text" name="svgthrow_stat_cha">
-
-    </section>
-
-    <section class="skills">
-
-        <label for="">Acrobatics:</label>
-        <input type="text" name="sk_acroba">
-
-        <label for="">Animal Handling:</label>
-        <input type="text" name="sk_animal">
-
-        <label for="">Arcana:</label>
-        <input type="text" name="sk_arcana">
-
-        <label for="">Athletics:</label>
-        <input type="text" name="sk_athlet">
-
-        <label for="">Deception:</label>
-        <input type="text" name="sk_decept">
-
-        <label for="">History:</label>
-        <input type="text" name="sk_histor">
-
-        <label for="">Insight:</label>
-        <input type="text" name="sk_insigh">
-
-        <label for="">Intimidation:</label>
-        <input type="text" name="sk_intimi">
-
-        <label for="">Investigation:</label>
-        <input type="text" name="sk_invest">
-
-        <label for="">Medicine:</label>
-        <input type="text" name="sk_medici">
-
-        <label for="">Nature:</label>
-        <input type="text" name="sk_nature">
-
-        <label for="">Perception:</label>
-        <input type="text" name="sk_percep">
-
-        <label for="">Performance:</label>
-        <input type="text" name="sk_perfor">
-
-        <label for="">Persuasion:</label>
-        <input type="text" name="sk_persua">
-
-        <label for="">Religion:</label>
-        <input type="text" name="sk_religi">
-
-        <label for="">Sleight of Hand:</label>
-        <input type="text" name="sk_sleigh">
-
-        <label for="">Stealth:</label>
-        <input type="text" name="sk_stealt">
-
-        <label for="">Survival:</label>
-
-        <input type="text" name="sk_suviva">
-
-        <label for="">Other Proficiencies and Languages:</label>
-        <input type="text" name="otr_prof_lang">
-
-    </section>
-
-    <section class="vitalinfo">
-
-        <label for="">Armor Class:</label>
-        <input type="text" name="armor">
-
-        <label for="">Initiative:</label>
-        <input type="text" name="initiative">
-
-        <label for="">Speed:</label>
-        <input type="text" name="speed">
-
-        <label for="">Current HP:</label>
-        <input type="text" name="current_hp">
-
-        <label for="">Temporary HP:</label>
-        <input type="text" name="temp_hp">
-
-        <label for="">Hit Dice:</label>
-        <input type="text" name="hit_dice">
-
-        <label for="">Death Save Successes:</label>
-        <input type="text" name="dthsv_pass">
-
-        <label for="">Death Save Failures:</label>
-        <input type="text" name="dthsv_fail">
-
-    </section>
-
-    <section class="equipmentfluff">
-        <label for="">Weapons and Spells:</label>
-        <input type="text" name="attacks_spells">
-
-        <label for="">Equipment:</label>
-        <input type="text" name="equipment">
-
-        <label for="">Traits:</label>
-        <input type="text" name="traits">
-
-        <label for="">Ideals:</label>
-        <input type="text" name="ideals">
-
-        <label for="">Bonds:</label>
-        <input type="text" name="bonds">
-
-        <label for="">Flaws:</label>
-        <input type="text" name="flaws">
-
-        <label for="">Features and Traits:</label>
-        <input type="text" name="fluff">
-    </section>
-
-    <button>Click Here to Upload!</button>
-
 </form>
 {% endblock %}
