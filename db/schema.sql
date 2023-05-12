@@ -62,6 +62,7 @@ CREATE TABLE sheets (
     spellcasting_class TEXT,
     spellcasting_ability TEXT,
     spell_save_dc TEXT,
+    spell_atk_bonus TEXT,
     cantrips TEXT,
     first_level_spells TEXT,
     second_level_spells TEXT,
@@ -92,98 +93,3 @@ CREATE TABLE users(
   email TEXT,
   password_digest TEXT
 );
-
-
-INSERT INTO sheets(
-    character_name,
-    class_and_level,
-    background,
-    player_name,
-    race,
-    alignment,
-    experience_points,
-    stat_str,
-    stat_dex,
-    stat_con,
-    stat_int,
-    stat_wis,
-    stat_cha,
-    passive_perception,
-    svgthrow_stat_str,
-    svgthrow_stat_dex,
-    svgthrow_stat_con,
-    svgthrow_stat_int,
-    svgthrow_stat_wis,
-    svgthrow_stat_cha,
-    prof_bonus,
-    sk_acroba,
-    sk_animal,
-    sk_arcana,
-    sk_athlet,
-    sk_decept,
-    sk_histor,
-    sk_insigh,
-    sk_intimi,
-    sk_invest,
-    sk_medici,
-    sk_nature,
-    sk_percep,
-    sk_perfor,
-    sk_persua,
-    sk_religi,
-    sk_sleigh,
-    sk_stealt,
-    sk_suviva,
-    otr_prof_lang,
-    armor,
-    initiative,
-    speed,
-    current_hp,
-    temp_hp,
-    hit_dice,
-    dthsv_pass,
-    dthsv_fail,
-    attacks_spells,
-    equipment,
-    traits,
-    ideals,
-    bonds,
-    flaws,
-    fluff
-    )
-VALUES
-('test','test','test','test','test','test','test','test','test','test',
-'test','test','test','test','test','test','test','test','test','test',
-'test','test','test','test','test','test','test','test','test','test',
-'test','test','test','test','test','test','test','test','test','test',
-'test','test','test','test','test','test','test','test','test','test',
-'test', 'test','test','test', 'test,');
-
--- 79 values total.
-
-
-  -- spellcasting_class,
-  -- spellcasting_ability,
-  -- spell_save_dc,
-  -- cantrips,
-  -- first_level_spells,
-  -- second_level_spells,
-  -- third_level_spells,
-  -- fourth_level_spells,
-  -- fifth_level_spells,
-  -- sixth_level_spells,
-  -- seventh_level_spells,
-  -- eighth_level_spells,
-  -- ninth_level_spells,
-
-    -- age
-    -- height
-    -- character_weight
-    -- eyes
-    -- skin
-    -- hair
-    -- appearance
-    -- allies_organisations
-    -- character_backstory
-    -- additional_features_traits
-    -- treasure
