@@ -93,3 +93,9 @@ CREATE TABLE users(
   email TEXT,
   password_digest TEXT
 );
+
+CREATE TABLE comments(
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER,
+  sheet_id INTEGER
+);

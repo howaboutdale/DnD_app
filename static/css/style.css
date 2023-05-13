@@ -1,18 +1,14 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
-
 body {
   background-color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* For Character Sheet Edit and Creation */
 .sheetcontainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 1.5rem;
-  /* border: 1px solid black; */
 }
 
 .basicinfo {
@@ -56,11 +52,6 @@ body {
   font-size: 14pt;
   border: 1px solid black;
 }
-.galleryimg {
-  height: 200px;
-  width: 200px;
-  /* border: 1px solid black; */
-}
 
 .spellsheet {
   display: flex;
@@ -74,6 +65,183 @@ body {
   border: 1px solid black;
 }
 
-h3 {
+.sheetheader {
   text-align: center;
+}
+
+/* End of Character Sheet Edit and Creation */
+
+.galleryimg {
+  height: 200px;
+  width: 200px;
+  /* border: 1px solid black; */
+}
+
+/* Index.HTML */
+.indexcontainer {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.pagetitle {
+  color: black;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.welcomeheader {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.indexcontrols {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.indexcontrols button {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pages {
+  display: flex;
+  gap: 10px;
+}
+
+.pages a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #4caf50;
+}
+
+.pages a:hover {
+  background-color: #45a049;
+}
+
+.entrypage {
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.entrypage a {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.entrypage a:hover {
+  background-color: #45a049;
+  color: #fff;
+}
+
+/* Sign Up and Log In (LISU) page */
+.LISUheader {
+  text-align: center;
+}
+.LISUcontainer {
+  margin-bottom: 20px;
+}
+
+.LISUlabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.LISUinput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.LISUbutton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.LISUbutton:hover {
+  background-color: #45a049;
+}
+
+.LISUform {
+  margin: 0 auto;
+  width: 300px;
+}
+
+/* Gallery Page */
+
+.gallerysheets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallerysheet {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.gallerycontrols {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.galleryimg {
+  width: 100%;
+  height: auto;
+}
+
+.gallerylink {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.deletebutton {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.deletebutton:hover {
+  background-color: #c82333;
+}
+
+.sheetpreview {
+  margin-top: 0;
 }

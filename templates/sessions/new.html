@@ -3,14 +3,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Log in</h1>
-<form action="/sessions" method="POST">
-    <label for="">Email:</label>
-    <input type="text" name="email">
+<h1 class="LISUheader">Log in</h1>
+<form class="LISUform" action="/sessions" method="POST">
+    <section class="LISUcontainer">
+        <label class="LISUlabel" for="">Email:</label>
+        <input class="LISUinput" type="text" name="email">
 
-    <label for="">Password:</label>
-    <input type="password" name="password">
+        <label class="LISUlabel" for="">Password:</label>
+        <input class="LISUinput" type="password" name="password">
+    </section>
 
-    <button>Log in</button>
+    <button class="LISUbutton">Log in</button>
 </form>
 {% endblock %}

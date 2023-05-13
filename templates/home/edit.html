@@ -7,7 +7,7 @@
 <form action="/home/{{ sheet['id'] }}" method="POST">
     <section class="sheetcontainer">
         <section class="basicinfo">
-            <h3>Character Info</h3>
+            <h3 class="sheetheader">Character Info</h3>
 
             <label for="">Character Name:</label>
             <input type="text" name="character_name" value="{{sheet['character_name'] }}">
@@ -33,7 +33,7 @@
         </section>
 
         <section class="mainstats">
-            <h3>Stats</h3>
+            <h3 class="sheetheader">Stats</h3>
 
             <label for="">Strength:</label>
             <input type="number" name="stat_str" value="{{ sheet['stat_str'] }}">
@@ -59,7 +59,7 @@
         </section>
 
         <section class="savingthrows">
-            <h3>Saving Throws</h3>
+            <h3 class="sheetheader">Saving Throws</h3>
 
             <label for="">Strength Saving Throw:</label>
             <input type="number" name="svgthrow_stat_str" value="{{ sheet['svgthrow_stat_str'] }}">
@@ -82,7 +82,7 @@
         </section>
 
         <section class="skills">
-            <h3>Skills</h3>
+            <h3 class="sheetheader">Skills</h3>
 
             <label for="">Proficiency Bonus:</label>
             <input type="number" name="prof_bonus" value="{{ sheet['prof_bonus'] }}">
@@ -142,12 +142,12 @@
             <input type="number" name="sk_suviva" value="{{ sheet['sk_suviva'] }}">
 
             <label for="">Other Proficiencies and Languages:</label>
-            <input type="text" name="otr_prof_lang" value="{{ sheet['otr_prof_lang'] }}">
+            <textarea name="otr_prof_lang">{{ sheet['otr_prof_lang'] }}</textarea>
 
         </section>
 
         <section class="vitalinfo">
-            <h3>Vital Info</h3>
+            <h3 class="sheetheader">Vital Info</h3>
 
             <label for="">Armor Class:</label>
             <input type="number" name="armor" value="{{ sheet['armor'] }}">
@@ -176,31 +176,31 @@
         </section>
 
         <section class="equipmentfluff">
-            <h3>Equipment and Basic Info</h3>
+            <h3 class="sheetheader">Equipment and Basic Info</h3>
             <label for="">Weapons and Spells:</label>
-            <input type="text" name="attacks_spells" value="{{ sheet['attacks_spells'] }}">
+            <textarea name="attacks_spells">{{ sheet['attacks_spells'] }}</textarea>
 
             <label for="">Equipment:</label>
-            <input type="text" name="equipment" value="{{ sheet['equipment'] }}">
+            <textarea name="equipment">{{ sheet['equipment'] }}</textarea>
 
             <label for="">Traits:</label>
-            <input type="text" name="traits" value="{{ sheet['traits'] }}">
+            <textarea name="traits">{{ sheet['traits'] }}</textarea>
 
             <label for="">Ideals:</label>
-            <input type="text" name="ideals" value="{{ sheet['ideals'] }}">
+            <textarea name="ideals">{{ sheet['ideals'] }}</textarea>
 
             <label for="">Bonds:</label>
-            <textarea type="text" name="bonds">{{ sheet['bonds'] }}</textarea>
+            <textarea name="bonds">{{ sheet['bonds'] }}</textarea>
 
             <label for="">Flaws:</label>
-            <textarea name="flaws" id="" cols="30" rows="10">{{ sheet['flaws'] }}</textarea>
+            <textarea name="flaws">{{ sheet['flaws'] }}</textarea>
 
             <label for="">Features and Traits:</label>
-            <textarea name="fluff" id="" cols="30" rows="10">{{ sheet['fluff'] }}</textarea>
+            <textarea name="fluff">{{ sheet['fluff'] }}</textarea>
         </section>
 
         <section class="spellsheet">
-            <h3>Spell Sheet</h3>
+            <h3 class="sheetheader">Spell Sheet</h3>
 
             <label for="">Spellcasting Class:</label>
             <input type="text" name="spellcasting_class" value="{{ sheet['spellcasting_class'] }}">
@@ -215,39 +215,39 @@
             <input type="number" name="spell_atk_bonus" value="{{ sheet['spell_atk_bonus'] }}">
 
             <label for="">Cantrips:</label>
-            <input type="text" name="cantrips" value="{{ sheet['cantrips'] }}">
+            <textarea name="cantrips">{{ sheet['cantrips'] }}</textarea>
 
             <label for="">First Level Spells:</label>
-            <input type="text" name="first_level_spells" value="{{ sheet['first_level_spells'] }}">
+            <textarea name="first_level_spells">{{ sheet['first_level_spells'] }}</textarea>
 
             <label for="">Second Level Spells:</label>
-            <input type="text" name="second_level_spells" value="{{ sheet['second_level_spells'] }}">
+            <textarea name="second_level_spells">{{ sheet['second_level_spells'] }}</textarea>
 
             <label for="">Third Level Spells:</label>
-            <input type="text" name="third_level_spells" value="{{ sheet['third_level_spells'] }}">
+            <textarea name="third_level_spells">{{ sheet['third_level_spells'] }}</textarea>
 
             <label for="">Fourth Level Spells:</label>
-            <input type="text" name="fourth_level_spells" value="{{ sheet['fourth_level_spells'] }}">
+            <textarea name="fourth_level_spells">{{ sheet['fourth_level_spells'] }}</textarea>
 
             <label for="">Fifth Level Spells:</label>
-            <input type="text" name="fifth_level_spells" value="{{ sheet['fifth_level_spells'] }}">
+            <textarea name="fifth_level_spells">{{ sheet['fifth_level_spells'] }}</textarea>
 
             <label for="">Sixth Level Spells:</label>
-            <input type="text" name="sixth_level_spells" value="{{ sheet['sixth_level_spells'] }}">
+            <textarea name="sixth_level_spells">{{ sheet['sixth_level_spells'] }}</textarea>
 
             <label for="">Seventh Level Spells:</label>
-            <input type="text" name="seventh_level_spells" value="{{ sheet['seventh_level_spells'] }}">
+            <textarea name="seventh_level_spells">{{ sheet['seventh_level_spells'] }}</textarea>
 
             <label for="">Eighth Level Spells:</label>
-            <input type="text" name="eighth_level_spells" value="{{ sheet['eighth_level_spells'] }}">
+            <textarea name="eighth_level_spells">{{ sheet['eighth_level_spells'] }}</textarea>
 
             <label for="">Ninth Level Spells:</label>
-            <input type="text" name="ninth_level_spells" value="{{ sheet['ninth_level_spells'] }}">
+            <textarea name="ninth_level_spells">{{ sheet['ninth_level_spells'] }}</textarea>
 
         </section>
 
         <section class="biosheet">
-            <h3>Character Bio</h3>
+            <h3 class="sheetheader">Character Bio</h3>
 
             <label for="">Age</label>
             <input type="text" name="age" value="{{ sheet['age'] }}">
@@ -267,20 +267,20 @@
             <label for="">Hair:</label>
             <input type="text" name="hair" value="{{ sheet['hair'] }}">
 
-            <label for="">Appearnce:</label>
-            <input type="text" name="appearance" value="{{ sheet['appearance'] }}">
+            <label for="">Appearance:</label>
+            <textarea name="appearance">{{ sheet['appearance'] }}</textarea>
 
             <label for="">Allies and Organisations:</label>
-            <input type="text" name="allies_organisations" value="{{ sheet['allies_organisations'] }}">
+            <textarea name="allies_organisations">{{ sheet['allies_organisations'] }}</textarea>
 
             <label for="">Character Backstory:</label>
-            <input type="text" name="character_backstory" value="{{ sheet['character_backstory'] }}">
+            <textarea name="character_backstory">{{ sheet['character_backstory'] }}</textarea>
 
             <label for="">Additional Features and Traits:</label>
-            <input type="text" name="additional_features_traits" value="{{ sheet['additional_features_traits'] }}">
+            <textarea name="additional_features_traits">{{ sheet['additional_features_traits'] }}</textarea>
 
             <label for="">Treasure:</label>
-            <input type="text" name="treasure" value="{{ sheet['treasure'] }}">
+            <textarea name="treasure">{{ sheet['treasure'] }}</textarea>
 
         </section>
 

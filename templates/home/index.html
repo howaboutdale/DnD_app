@@ -2,26 +2,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>The DND App</h1>
-<h2>Home Screen</h2>
+<section class="indexcontainer">
+    <h1 class="pagetitle">The DND App</h1>
 
-{% if current_user() %}
-<h3>Welcome {{ current_user()['first_name'] }}</h3>
+    {% if current_user() %}
+    <h3 class="welcomeheader">Welcome {{ current_user()['first_name'] }}</h3>
 
-<section class="controls">
-    <form action="/sessions/delete" method="POST">
-        <button>Log Out</button>
-    </form>
-
-    <a href="/home/new">Create a New Sheet</a>
-    <a href="/home/SRD">Browse the SRD Content - coming soon -</a>
-    <a href="/home/gallery">Browse Character Sheets</a>
-</section>
+    <section class="indexcontrols">
+        <form action="/sessions/delete" method="POST">
+            <button>Log Out</button>
+        </form>
+        <nav class="pages">
+            <a href="/home/new">Create a New Sheet</a>
+            <a href="/home/SRD">Browse the SRD Content - coming soon -</a>
+            <a href="/home/gallery">Browse Character Sheets</a>
+        </nav>
+    </section>
 
 
 </section>
 {% else %}
-<a href="/users/new">Sign Up</a>
-<a href="/sessions/new">Log in</a>
+<section class="entrypage">
+    <a href="/users/new">Sign Up</a>
+    <a href="/sessions/new">Log in</a>
+</section>
 {% endif %}
+</section>
 {% endblock %}

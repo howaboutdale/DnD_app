@@ -2,21 +2,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Sign Up</h1>
-<form action="/users" method="POST">
-    <label for="">First Name:</label>
-    <input type="text" name="first_name">
+<h1 class="LISUheader">Sign Up</h1>
+<form class="LISUform" action="/users" method="POST">
+    <section class="LISUcontainer">
+        <label class="LISUlabel" for="">First Name:</label>
+        <input class="LISUinput" type="text" name="first_name">
 
-    <label for="">Last Name:</label>
-    <input type="text" name="last_name">
+        <label class="LISUlabel" for="">Last Name:</label>
+        <input class="LISUinput" type="text" name="last_name">
 
-    <label for="">Email</label>
-    <input type="text" name="email">
+        <label class="LISUlabel" for="">Email</label>
+        <input class="LISUinput" type="text" name="email">
 
-    <label for="">Password:</label>
-    <input type="password" name="password">
+        <label class="LISUlabel" for="">Password:</label>
+        <input class="LISUinput" type="password" name="password">
+    </section>
 
-    <button>Sign Up</button>
+    <button class="LISUbutton">Sign Up</button>
 
 </form>
 {% endblock %}
