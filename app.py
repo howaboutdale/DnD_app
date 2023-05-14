@@ -5,7 +5,7 @@ from routes.users_routes import users_routes
 from routes.sessions_routes import sessions_routes
 
 
-SECRET_KEY = os.environ.get("FLASK_SECRET_KEY", "pretend key for testing purpoises")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 app = Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
 
