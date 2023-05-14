@@ -196,6 +196,13 @@ body {
 
 /* Gallery Page */
 
+.gallerycontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
 .gallerysheets {
   display: flex;
   flex-wrap: wrap;

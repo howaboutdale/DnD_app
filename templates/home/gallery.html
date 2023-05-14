@@ -2,14 +2,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <a class="gallerylink" href="/home/new">Create a New Sheet</a>
 <a class="gallerylink" href="/home">Home</a>
+<section class="gallerycontainer"></section>
 <section class="gallerysheets">
     {% for sheet in sheets %}
     <section class="gallerysheet">
         <header>
             <section class="gallerycontrols">
                 <a class="gallerylink" href="/home/{{ sheet['id'] }}/edit">Edit</a>
+                <form action="/home/{{ sheet['id'] }}/comment" method="POST">
+                    <input type="text" name="comment_content" placeholder="Write a comment...">
+                    <button>Add Comment</button>
+
+                </form>
 
                 <form action="home/{{ sheet['id'] }}/delete" method="POST">
                     <button class="deletebutton">Delete</button>
@@ -17,7 +24,13 @@
             </section>
             <h2 class="sheetpreview">{{ sheet['character_name'] }} - {{ sheet['class_and_level'] }}</h2>
             <img class="galleryimg" src="https://cdn.onlinewebfonts.com/svg/img_119089.png" alt="">
+            {% for comment in comments %}
+            {% if comment['sheet_id'] == sheet['id'] %}
+            <p>{{ comment['comment_content'] }}</p>
+            {% endif %}
+            {% endfor%}
     </section>
     {% endfor %}
+</section>
 </section>
 {% endblock %}

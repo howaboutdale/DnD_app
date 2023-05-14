@@ -105,12 +105,12 @@ def delete_sheet(id):
     sql('DELETE FROM sheets WHERE id=%s RETURNING *', [id])
 
 
+def add_comment(sheet_id, user_id, comment_content):
+    sql("INSERT INTO comments(user_id, sheet_id, comment_content) VALUES(%s, %s, %s) RETURNING *",[user_id, sheet_id, comment_content])
 
+def get_comment_for_sheet(sheet_id):
+    comments = sql("SELECT * FROM comments WHERE sheet_id=%s", [sheet_id])
+    return comments[0]
 
-
-    #sk_athlet, sk_decept, sk_histor, sk_insigh, sk_intimi, sk_invest, sk_medici, sk_nature, sk_percep, sk_perfor, sk_persua, sk_religi, sk_sleigh, sk_stealt, sk_suviva
-        #svgthrow_stat_str, svgthrow_stat_dex, svgthrow_stat_con, svgthrow_stat_int, svgthrow_stat_wis, svgthrow_stat_cha, sk_acroba, sk_animal, sk_arcana, sk_athlet, sk_decept, sk_histor, sk_insigh, sk_intimi, sk_invest, sk_medici, sk_nature, sk_percep, sk_perfor, sk_persua, sk_religi, sk_sleigh, sk_stealt, sk_suviva
-    # otr_prof_lang, armor, initiative, speed, current_hp, temp_hp, hit_dice, dthsv_pass, dthsv_fail, attacks_spells, equipment, traits, ideals, bonds, flaws, fluff
-
-
-    # %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+def all_comments():
+    return sql('SELECT * FROM comments')

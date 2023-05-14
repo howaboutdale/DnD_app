@@ -97,5 +97,6 @@ CREATE TABLE users(
 CREATE TABLE comments(
   id SERIAL PRIMARY KEY,
   user_id INTEGER,
-  sheet_id INTEGER
+  sheet_id INTEGER,
+  comment_content TEXT
 );
