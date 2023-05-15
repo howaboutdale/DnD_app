@@ -33,9 +33,7 @@ The creation process of this app has really concreted my understanding of how tr
 
 ## :poop: Bugs!
 
-- Clicking and dragging results in all squares being filled
-- Spam clicking allows for multiple boxes to be selected
-- The above also interfere with the reset button's functionality
+- In Progess
 
 ## :white_check_mark: Future features
 
