@@ -8,7 +8,19 @@
 
     {% if current_user() %}
     <h3 class="welcomeheader">Welcome {{ current_user()['first_name'] }}</h3>
-    <!-- <audio src="./fantasy.mp3" controls></audio> -->
+    <!-- <source src="{{ url_for('static', filename='fantasy.mp3') }}" type="audio"> -->
+    <audio src="{{ url_for('static', filename='../static/long.mp3') }}" controls autoplay></audio>
+
+
+    <!-- <audio class="'budgetlotr" id="audio" controls>
+        <source src="./audio/fantasy.mp3" />
+    </audio>  Attempt Four -->
+
+    <!-- <audio class="swords-audio" id="audio">
+        <source src="./audio/sword.mp3" />
+    </audio>  pablo code -->
+
+    <!-- <audio src="{{ url_for('static', filename='../static/song2.ogg') }}" autoplay></audio> -->
 
 
     <section class="indexcontrols">
