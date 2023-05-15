@@ -34,6 +34,7 @@ The creation process of this app has really concreted my understanding of how tr
 ## :poop: Bugs!
 
 - In Progress
+- Audio File present but not playing
 
 ## :white_check_mark: Future features
 

@@ -85,7 +85,7 @@ body {
   max-width: 800px;
 }
 
-.pagetitle {
+#pagetitle {
   color: black;
   font-size: 36px;
   margin-bottom: 20px;
