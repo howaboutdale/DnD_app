@@ -2,9 +2,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<a href="/home">Home (Changes Will Be Lost)</a>
+
 <h1>Edit Sheet</h1>
 <form action="/home/{{ sheet['id'] }}" method="POST">
+    <a class="gallerylink" href="/home">Home (Changes Will Be Lost)</a>
+    <button class="gallerylink">Click Here to Finalise Edit!</button>
     <section class="sheetcontainer">
         <section class="basicinfo">
             <h3 class="sheetheader">Character Info</h3>
@@ -286,7 +288,7 @@
 
 
     </section>
-    <button>Click Here to Finalise Edit!</button>
+
 
 </form>
 {% endblock %}

@@ -29,12 +29,12 @@ A simple app that allows you to create, store and edit DnD character sheets.
 
 ## :sob: Lessons learnt
 
-The creation process of this app has really concreted my understanding of how traffic flows through a website. I have also got a much greater appreciation for websites that I have used daily for years.
+- The creation process of this app has really concreted my understanding of how traffic flows through a website. I have also got a much greater appreciation for websites that I have used daily for years.
+- Everything and nothing is ever as simple as it appears
 
 ## :poop: Bugs!
 
 - In Progress
-- Audio File present but not playing
 
 ## :white_check_mark: Future features
 

@@ -3,8 +3,10 @@
 
 {% block content %}
 <h1>Create a Character Sheet!</h1>
-<a class="LISUbutton" href="/home">Home (Content Will Be Lost)</a>
+
 <form action="/home" method="POST">
+    <a class="LISUbutton" href="/home">Home (Content Will Be Lost)</a>
+    <button class="LISUbutton">Click Here to Upload!</button>
     <section class="sheetcontainer">
         <section class="basicinfo">
             <h3>Character Info</h3>
@@ -142,7 +144,7 @@
             <input type="number" name="sk_suviva">
 
             <label for="">Other Proficiencies and Languages:</label>
-            <input type="text" name="otr_prof_lang">
+            <textarea name="otr_prof_lang"></textarea>
 
         </section>
 
@@ -178,25 +180,25 @@
         <section class="equipmentfluff">
             <h3>Equipment and Basic Info</h3>
             <label for="">Weapons and Spells:</label>
-            <input type="text" name="attacks_spells">
+            <textarea name="attacks_spells"></textarea>
 
             <label for="">Equipment:</label>
-            <input type="text" name="equipment">
+            <textarea name="equipment"></textarea>
 
             <label for="">Traits:</label>
-            <input type="text" name="traits">
+            <textarea name="traits"></textarea>
 
             <label for="">Ideals:</label>
-            <input type="text" name="ideals">
+            <textarea name="ideals"></textarea>
 
             <label for="">Bonds:</label>
-            <input type="text" name="bonds">
+            <textarea name="bonds"></textarea>
 
             <label for="">Flaws:</label>
-            <input type="text" name="flaws">
+            <textarea name="flaws"></textarea>
 
             <label for="">Features and Traits:</label>
-            <textarea name="fluff" id="" cols="30" rows="10"></textarea>
+            <textarea name="fluff"></textarea>
         </section>
 
         <section class="spellsheet">
@@ -215,34 +217,34 @@
             <input type="number" name="spell_atk_bonus">
 
             <label for="">Cantrips:</label>
-            <input type="text" name="cantrips">
+            <textarea name="cantrips"></textarea>
 
             <label for="">First Level Spells:</label>
-            <input type="text" name="first_level_spells">
+            <textarea name="first_level_spells"></textarea>
 
             <label for="">Second Level Spells:</label>
-            <input type="text" name="second_level_spells">
+            <textarea name="second_level_spells"></textarea>
 
             <label for="">Third Level Spells:</label>
-            <input type="text" name="third_level_spells">
+            <textarea name="third_level_spells"></textarea>
 
             <label for="">Fourth Level Spells:</label>
-            <input type="text" name="fourth_level_spells">
+            <textarea name="fourth_level_spells"></textarea>
 
             <label for="">Fifth Level Spells:</label>
-            <input type="text" name="fifth_level_spells">
+            <textarea name="fifth_level_spells"></textarea>
 
             <label for="">Sixth Level Spells:</label>
-            <input type="text" name="sixth_level_spells">
+            <textarea name="sixth_level_spells"></textarea>
 
             <label for="">Seventh Level Spells:</label>
-            <input type="text" name="seventh_level_spells">
+            <textarea name="seventh_level_spells"></textarea>
 
             <label for="">Eighth Level Spells:</label>
-            <input type="text" name="eighth_level_spells">
+            <textarea name="eighth_level_spells"></textarea>
 
             <label for="">Ninth Level Spells:</label>
-            <input type="text" name="ninth_level_spells">
+            <textarea name="ninth_level_spells"></textarea>
 
         </section>
 
@@ -268,23 +270,24 @@
             <input type="text" name="hair">
 
             <label for="">Appearnce:</label>
-            <input type="text" name="appearance">
+            <textarea name="appearance"></textarea>
 
             <label for="">Allies and Organisations:</label>
-            <input type="text" name="allies_organisations">
+            <textarea name="allies_organisations"></textarea>
 
             <label for="">Character Backstory:</label>
-            <input type="text" name="character_backstory">
+            <textarea name="character_backstory"></textarea>
 
             <label for="">Additional Features and Traits:</label>
-            <input type="text" name="additional_features_traits">
+            <textarea name="additional_features_traits"></textarea>
 
             <label for="">Treasure:</label>
             <textarea name="treasure"></textarea>
 
         </section>
 
-        <button>Click Here to Upload!</button>
+
     </section>
+
 </form>
 {% endblock %}
