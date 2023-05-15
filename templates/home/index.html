@@ -2,12 +2,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<audio src="fantasy.mp3" controls></audio>
+
 <section class="indexcontainer">
     <h1 id="pagetitle" class="animate__animated animate__bounceInDown">The DND App</h1>
 
     {% if current_user() %}
     <h3 class="welcomeheader">Welcome {{ current_user()['first_name'] }}</h3>
+    <!-- <audio src="./fantasy.mp3" controls></audio> -->
+
 
     <section class="indexcontrols">
         <form action="/sessions/delete" method="POST">
