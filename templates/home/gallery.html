@@ -24,9 +24,10 @@
             </section>
             <h2 class="sheetpreview">{{ sheet['character_name'] }} - {{ sheet['class_and_level'] }}</h2>
             <img class="galleryimg" src="https://cdn.onlinewebfonts.com/svg/img_119089.png" alt="">
+
             {% for comment in comments %}
             {% if comment['sheet_id'] == sheet['id'] %}
-            <p>{{ comment['comment_content'] }} posted by {{ comment['commenter_name'] }}</p>
+            <p>{{ comment['comment_content'] }} - posted by: {{ comment['commenter_name'] }}</p>
             {% endif %}
             {% endfor%}
     </section>

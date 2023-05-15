@@ -98,5 +98,6 @@ CREATE TABLE comments(
   id SERIAL PRIMARY KEY,
   user_id INTEGER,
   sheet_id INTEGER,
-  comment_content TEXT
+  comment_content TEXT,
+  commenter_name TEXT
 );

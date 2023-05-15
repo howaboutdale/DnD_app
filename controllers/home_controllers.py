@@ -6,11 +6,28 @@ def index():
     sheets = all_sheets()
     return render_template ('home/index.html', sheets=sheets, current_user=current_user)
 
+# ----------------
+
+def get_monster_from_api(api_monster):
+    api_url = f'https://www.dnd5eapi.co/api/monsters/{api_monster}'
+    response = request.get(api_url).json()
+    return response
+
+def get_from_api(api_monster):
+    api_monster = request.args.get('monster') # this gets what is inputed on the srd page
+    monster = get_monster_from_api(api_monster)
+    return render_template('API.html', monster=monster)
+
+# -------------
+
 def gallery():
     comments = all_comments()
     sheets = all_sheets()
     users = all_users()
     return render_template ('home/gallery.html', comments=comments, sheets=sheets, current_user=current_user, users=users)
+
+def SRD():
+    return render_template ('home/SRD.html')
 
 def new():
     return render_template('home/create.html')

@@ -1,5 +1,5 @@
 from flask import Blueprint
-from controllers.home_controllers import index, new, create, edit, update, delete, gallery, comment
+from controllers.home_controllers import index, new, create, edit, update, delete, gallery, comment, SRD, get_from_api
 
 home_routes = Blueprint('home_routes', __name__)
 
@@ -11,3 +11,6 @@ home_routes.route('/<id>/edit')(edit)
 home_routes.route('/<id>', methods=["POST"])(update)
 home_routes.route('home/<id>/delete', methods=["POST"])(delete)
 home_routes.route('/<id>/comment', methods=["POST"])(comment)
+home_routes.route("/SRD")(SRD)
+home_routes.route("/API")(get_from_api)
+
