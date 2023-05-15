@@ -227,6 +227,17 @@ body {
   height: auto;
 }
 
+.gallerynav {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .gallerylink {
   padding: 10px 20px;
   background-color: #4caf50;

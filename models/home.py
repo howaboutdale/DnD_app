@@ -1,18 +1,11 @@
 from db.db import sql
 
 def all_sheets():
-    return sql('SELECT * FROM sheets')
+    return sql('SELECT * FROM sheets ORDER BY id')
 
 def get_sheets(id):
     sheets = sql('SELECT * FROM sheets WHERE id = %s', [id])
     return sheets[0]
-
-# Need to change the parameters and the inserts into table
-# gonna be a lot of arguments/parameters haha :(
-# seperate into different functions?
-# one for stats, include passive perception
-# one for proficiencies/prof bonus and saving throws?
-# one for armor class, init, speed weapons and spells?
 
 def create_sheets(
     character_name,
@@ -105,12 +98,11 @@ def delete_sheet(id):
     sql('DELETE FROM sheets WHERE id=%s RETURNING *', [id])
 
 
-def add_comment(sheet_id, user_id, comment_content):
-    sql("INSERT INTO comments(user_id, sheet_id, comment_content) VALUES(%s, %s, %s) RETURNING *",[user_id, sheet_id, comment_content])
-
-def get_comment_for_sheet(sheet_id):
-    comments = sql("SELECT * FROM comments WHERE sheet_id=%s", [sheet_id])
-    return comments[0]
+def add_comment(sheet_id, user_id, comment_content, commenter_name):
+    sql("INSERT INTO comments(user_id, sheet_id, comment_content, commenter_name) VALUES(%s, %s, %s, %s) RETURNING *",[user_id, sheet_id, comment_content, commenter_name])
 
 def all_comments():
     return sql('SELECT * FROM comments')
+
+def all_users():
+    return sql('SELECT * FROM users')

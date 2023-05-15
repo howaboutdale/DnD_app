@@ -1,10 +1,10 @@
-<!-- This should display small preview of each sheet and button to go to  edit page of each sheet -->
+<!-- This should display small preview of each sheet and button to go to edit page of each sheet -->
 {% extends 'base.html' %}
 
 {% block content %}
-
-<a class="gallerylink" href="/home/new">Create a New Sheet</a>
-<a class="gallerylink" href="/home">Home</a>
+<h3 class="welcomeheader">Welcome {{ current_user()['first_name'] }}</h3>
+<a class="gallerynav" href="/home/new">Create a New Sheet</a>
+<a class="gallerynav" href="/home">Home</a>
 <section class="gallerycontainer"></section>
 <section class="gallerysheets">
     {% for sheet in sheets %}
@@ -26,7 +26,7 @@
             <img class="galleryimg" src="https://cdn.onlinewebfonts.com/svg/img_119089.png" alt="">
             {% for comment in comments %}
             {% if comment['sheet_id'] == sheet['id'] %}
-            <p>{{ comment['comment_content'] }}</p>
+            <p>{{ comment['comment_content'] }} posted by {{ comment['commenter_name'] }}</p>
             {% endif %}
             {% endfor%}
     </section>

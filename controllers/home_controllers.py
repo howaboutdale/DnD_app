@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, session
-from models.home import all_sheets, get_sheets, create_sheets, update_sheet, delete_sheet, add_comment, all_comments
+from models.home import all_sheets, get_sheets, create_sheets, update_sheet, delete_sheet, add_comment, all_comments, all_users
 from services.session_info import current_user
 
 def index():
@@ -9,7 +9,8 @@ def index():
 def gallery():
     comments = all_comments()
     sheets = all_sheets()
-    return render_template ('home/gallery.html', comments=comments, sheets=sheets, current_user=current_user)
+    users = all_users()
+    return render_template ('home/gallery.html', comments=comments, sheets=sheets, current_user=current_user, users=users)
 
 def new():
     return render_template('home/create.html')
@@ -192,5 +193,6 @@ def delete(id):
 
 def comment(id):
     comment_content = request.form.get('comment_content')
-    add_comment(id, session['user_id'], comment_content)
+    commenter_name = current_user()['first_name']
+    add_comment(id, session['user_id'], comment_content, commenter_name)
     return redirect('/home/gallery')
