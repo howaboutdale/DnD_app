@@ -33,7 +33,7 @@ The creation process of this app has really concreted my understanding of how tr
 
 ## :poop: Bugs!
 
-- In Progess
+- In Progress
 
 ## :white_check_mark: Future features
 
