@@ -263,3 +263,23 @@ body {
 .sheetpreview {
   margin-top: 0;
 }
+
+.music {
+  padding-top: 5px;
+  display: flex;
+}
+
+.commentinput {
+  display: flex;
+  margin-bottom: 10px;
+}
+.commentbutton {
+  display: flex;
+  padding: 5px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
